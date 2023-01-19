@@ -1,0 +1,31 @@
+package edu.mission;
+
+public class Test5 {
+	
+	public static void main(String[] args) {
+		int[] a = {1, 1, 1, 1, 1, 1, 1, 1};
+		int[] b = {2, 2, 2, 2, 2, 2, 2, 2};
+		
+		
+		
+		printArray(merge(a, b));
+	}
+
+	private static void printArray(int[] arr) {
+		for(int i = arr.length - 1; i >= 0; i--) {
+			System.out.print(arr[i] + "\t");
+		}
+		
+	}
+
+	private static int[] merge(int[] a, int[] b) {
+		int n = a.length + b.length;
+		int[] c = new int[n];
+	
+		for (int i = a.length-1; i >= 0; i--) {
+			c[--n] = a[i];
+			c[--n] = b[i];
+		}
+		return c;
+	}
+}

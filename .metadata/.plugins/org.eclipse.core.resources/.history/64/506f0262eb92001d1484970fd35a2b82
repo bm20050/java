@@ -1,0 +1,18 @@
+package edu.mission;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double x;
+		double a = -9.81;
+		int t = 5;
+		int v0 = 0;
+		int x0 = 1000;
+		
+		x = (double)1 / 2 * a * t * t + v0 * t + x0;
+		
+		System.out.println(t + "초 후 위치 : " + x);
+	}	
+
+}

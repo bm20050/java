@@ -1,0 +1,39 @@
+package edu.mission;
+
+import java.util.Scanner;
+
+public class Test6 {
+	public static void calc(int num1, int num2) {
+		int a, b;
+		while (true) {
+			if (num1 >= num2) {
+				int rem = num1 % num2;
+				if (rem == 0) {
+					a = num2;
+					b = num1 * num2 / a;
+					break;
+				}
+
+				else {
+					num1 = num2;
+					num2 = rem;
+				}
+			} 
+			else {
+				int temp = num1;
+				num1 = num2;
+				num2 = temp;
+			}
+		}
+		System.out.println(a);
+		System.out.println(b);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+
+		calc(num1, num2);
+	}
+}
