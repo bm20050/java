@@ -1,0 +1,42 @@
+package edu.mission;
+
+import java.util.Scanner;
+
+public class Test9 {
+	public static boolean isPrimeNumber(int n) {
+		if (n == 1) return false;
+		boolean a = true;
+		for (int i = 2; i < n; i++) {
+			if (n % i == 0) {
+				a = false;
+				break;
+			}
+		}
+		return a;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		while ((n = sc.nextInt()) != 0) {
+			
+			System.out.println("0입력시 종료");
+			System.out.print("숫자입력: ");
+				
+			if ( isPrimeNumber(n) )
+				System.out.println("소수 O");
+			else
+				System.out.println("소수 X");
+		}
+//		try (Scanner sc = new Scanner(System.in)) {
+//			System.out.println("Number: ");
+//			int num;
+//			while ((num = sc.nextInt()) != 0) {
+//				prime(num);
+//				System.out.println(isPrimeNumber(num));
+//			}
+//		}
+//		System.out.println("프로그램을종료합니다.");
+	}
+
+}
