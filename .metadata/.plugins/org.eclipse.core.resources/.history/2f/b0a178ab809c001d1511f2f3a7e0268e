@@ -1,0 +1,26 @@
+package edu.mission;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Test10 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Character> list = new ArrayList<Character>();
+		try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));) {
+			char num;
+			while(0 <= (num = (char) br.read())) { // 한 글자씩 읽기
+				list.add(num);
+				System.out.println(num);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		for (int i = 0; i < list.size(); i++)
+			System.out.println(list.get(i));
+	}
+
+}

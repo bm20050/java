@@ -1,0 +1,28 @@
+package edu.mission;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Test10 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> list = new ArrayList<String>();
+		try (BufferedReader br = new BufferedReader(new FileReader("input.txt"));) {
+			String str;
+			while((str = br.readLine()) != null) { // 한 문장씩 읽기
+				//for(int i = 0; i < list.size(); i++ )
+				list.add(str);
+			}		
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		for(int i = 0; i < list.size(); i++)
+			System.out.println(list.get(i));
+	}
+	
+}
