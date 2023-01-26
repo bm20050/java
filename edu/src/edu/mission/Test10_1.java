@@ -15,8 +15,7 @@ public class Test10_1 {
 	}
 
 	public static void swap(ArrayList<Integer> arr0, ArrayList<Integer> arr1) {
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		temp = arr0;
+		ArrayList<Integer> temp = arr0;
 		arr0 = arr1;
 		arr1 = temp;
 	}
