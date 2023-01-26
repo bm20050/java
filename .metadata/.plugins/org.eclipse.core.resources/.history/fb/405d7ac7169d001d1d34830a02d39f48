@@ -29,14 +29,11 @@ public class Test10_1 {
 	}
 
 	public static ArrayList<Integer> calc(ArrayList<Integer> arr0, ArrayList<Integer> arr1) {
-		int add = 0;
 		for (int i = 0; i < arr1.size(); i++) {
-			arr0.set(i, arr0.get(i) + arr1.get(i) + add);
 			if (arr0.get(i) >= 10) {
-				add = 1;
-				arr0.set(i, arr0.get(i) % 10);
+				arr0.set(i, (arr0.get(i) + arr1.get(i)) % 10 + arr1.get(i) + 1);
 			} else {
-				add = 0;
+				arr0.set(i, arr0.get(i) + arr1.get(i));
 			}
 		}
 		return arr0;
